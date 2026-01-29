@@ -1,0 +1,48 @@
+.progress {
+    width: 500px;
+    height: 30px;
+    accent-color: green;
+    background-color: yellow;
+    margin-bottom: 150px;
+}
+.accdordion {
+}
+.accdordion-item {
+    border: 1px solid #ccc;       /* Рисуем рамку вокруг блока */
+    border-radius: 4px;           /* Немного скругляем углы */
+           /* Добавляем внутренние отступы */
+    max-width: 500px;             /* Ограничиваем ширину блока */
+    background-color: #fafafa; 
+    transition: 0.5s;
+}
+
+.title {
+  padding: 8px 12px; 
+  cursor: pointer;              /* Указываем, что по заголовку можно кликать */
+  list-style: none;             /* Отключаем маркер в некоторых браузерах */
+  font-weight: 600;  
+  position: relative;          /* Нужно для позиционирования стрелки */
+  padding-left: 20px;  
+  transition: 0.5s;
+}
+.title::-webkit-details-marker {
+    display: none;
+}
+
+.title::before {
+    content: '▶';
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+
+.accdordion-item[open] > .title::before {
+    content: '▼'; 
+    top: 8px;
+}
+
+.item {
+    background-color: #efefef;
+    padding: 8px 20px; 
+    margin: 0; 
+}
